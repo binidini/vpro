@@ -1,0 +1,14 @@
+{
+    "name": "binidini/viktis-theme",
+    "authors": [
+        {
+            "name": "Denis Manilo",
+            "email": "denis@binidini.ru"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "Viktis Theme"
+        }
+    }
+}
