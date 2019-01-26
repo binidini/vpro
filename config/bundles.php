@@ -57,4 +57,7 @@ return [
     Symfony\Bundle\WebServerBundle\WebServerBundle::class => ['dev' => true, 'test' => true, 'test_cached' => true],
     Fidry\AliceDataFixtures\Bridge\Symfony\FidryAliceDataFixturesBundle::class => ['dev' => true, 'test' => true, 'test_cached' => true],
     Nelmio\Alice\Bridge\Symfony\NelmioAliceBundle::class => ['dev' => true, 'test' => true, 'test_cached' => true],
+    FOS\CKEditorBundle\FOSCKEditorBundle::class => ['dev' => true, 'test' => true], // WYSIWYG editor
+    SitemapPlugin\SitemapPlugin::class => ['dev' => true, 'test' => true], // Sitemap support
+    BitBag\SyliusCmsPlugin\BitBagSyliusCmsPlugin::class  => ['dev' => true, 'test' => true],
 ];
