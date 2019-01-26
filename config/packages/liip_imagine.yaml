@@ -1,0 +1,60 @@
+liip_imagine:
+    resolvers:
+        default:
+            web_path:
+                web_root: "%kernel.project_dir%/public"
+                cache_prefix: "media/cache"
+    filter_sets:
+        sylius_shop_product_original:
+            filters:
+                # use and setup the "watermark" filter
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../public/watermark.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center
+        sylius_shop_product_tiny_thumbnail:
+            filters:
+                thumbnail: { size: [64, 45], mode: outbound }
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../public/watermark.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center
+        sylius_shop_product_small_thumbnail:
+            filters:
+                thumbnail: { size: [150, 106], mode: outbound }
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../public/watermark.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center
+        sylius_shop_product_thumbnail:
+            filters:
+                thumbnail: { size: [260, 184], mode: outbound }
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../public/watermark.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center
+        sylius_shop_product_large_thumbnail:
+            filters:
+                thumbnail: { size: [550, 389], mode: outbound }
+                watermark:
+                    # path to the watermark file (prepended with "%kernel.root_dir%")
+                    image: ../public/watermark.png
+                    # size of the water mark relative to the input image
+                    size: 1
+                    # set the position of the watermark
+                    position: center
+        sylius_shop_taxon_thumbnail:
+            filters:
+                thumbnail: { size: [550, 389], mode: outbound }

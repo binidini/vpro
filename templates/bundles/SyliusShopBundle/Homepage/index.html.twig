@@ -1,0 +1,10 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+    {{ render(url('sylius_shop_partial_taxon_index_by_code', {'code': 'category', 'template': '@SyliusShop/Taxon/_horizontalList.html.twig'})) }}
+
+    <h2 class="ui horizontal section divider header">
+        {{ 'sylius.ui.latest_products'|trans }}
+    </h2>
+    {{ render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) }}
+{% endblock %}
