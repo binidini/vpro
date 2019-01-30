@@ -44,17 +44,7 @@
             {{ render(controller('sylius.controller.shop.security_widget:renderAction')) }}
 
             {{ sonata_block_render_event('sylius.shop.layout.after_security_widget') }}
-        </div>
-    {% endblock %}
-
-    <div class="ui container">
-        {% block header %}
-            <header>
-                {% include '@SyliusShop/_header.html.twig' %}
-
-                {{ sonata_block_render_event('sylius.shop.layout.after_header') }}
-
-                {#{ render(url('sylius_shop_partial_taxon_index_by_code', {'code': 'menu-viktis-ru', 'template': '@SyliusShop/Taxon/_horizontalMenu.html.twig'})) }#}
+        </div>HE', {'code': 'menu-viktis-ru', 'template': '@SyliusShop/Taxon/_horizontalMenu.html.twig'})) }#}
                 <div class="ui divider"></div>
             </header>
         {% endblock %}
