@@ -2,6 +2,10 @@
 {% import '@SyliusUi/Macro/pagination.html.twig' as pagination %}
 
 
-<< тут будут кубики >>
-<hr/>
+{{ render(url('sylius_shop_partial_taxon_show_by_slug', {
+    'slug': app.request.attributes.get('slug'),
+    'template': '@SyliusShop/Taxon/_imageMenu.html.twig'
+})) }}
+
+<br/>
 {{ bitbag_cms_render_block(app.request.attributes.get('slug')) }}
