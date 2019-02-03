@@ -1,7 +1,6 @@
 {% import '@SyliusUi/Macro/messages.html.twig' as messages %}
 {% import '@SyliusUi/Macro/pagination.html.twig' as pagination %}
 
-
 {{ render(url('sylius_shop_partial_taxon_show_by_slug', {
     'slug': app.request.attributes.get('slug'),
     'template': '@SyliusShop/Taxon/_imageMenu.html.twig'

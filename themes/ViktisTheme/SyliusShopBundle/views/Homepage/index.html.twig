@@ -6,7 +6,12 @@
             {% include '@SyliusShop/Homepage/_sidebar.html.twig' %}
         </div>
         <div class="twelve wide column">
-            Корпоративный сайт компании Виктис
+
+            {{ render(url('sylius_shop_partial_taxon_show_by_slug', {
+                'slug': 'menu-viktis-ru',
+                'template': '@SyliusShop/Taxon/_imageMenu.html.twig'
+            })) }}
+
         </div>
     </div>
 {% endblock %}
