@@ -20,6 +20,8 @@
 
         {% include '@SyliusUi/_stylesheets.html.twig' with {'path': 'assets/shop/css/style.css'} %}
 
+        <link rel="stylesheet" href="{{ asset('bundles/syliusshop/styles.css') }}">
+
         {{ sonata_block_render_event('sylius.shop.layout.stylesheets') }}
     {% endblock %}
 
@@ -45,6 +47,16 @@
 
             {{ sonata_block_render_event('sylius.shop.layout.after_security_widget') }}
         </div>
+    {% endblock %}
+
+    <div class="ui container">
+        {% block header %}
+            <header>
+                {% include '@SyliusShop/_header.html.twig' %}
+
+                {{ sonata_block_render_event('sylius.shop.layout.after_header') }}
+
+                {#{ render(url('sylius_shop_partial_taxon_index_by_code', {'code': 'menu-viktis-ru', 'template': '@SyliusShop/Taxon/_horizontalMenu.html.twig'})) }#}
                 <div class="ui divider"></div>
             </header>
         {% endblock %}
