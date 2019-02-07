@@ -7,4 +7,6 @@
 })) }}
 
 <br/>
-{{ bitbag_cms_render_block(app.request.attributes.get('slug')) }}
+{{ render(path('bitbag_sylius_cms_plugin_shop_page_show', {'slug' : 'ttt'})) }}
+
+{#{ bitbag_cms_render_block(app.request.attributes.get('slug')) }#}

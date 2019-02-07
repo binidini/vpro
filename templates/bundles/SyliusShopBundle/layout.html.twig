@@ -19,6 +19,7 @@
         <![endif]-->
 
         {% include '@SyliusUi/_stylesheets.html.twig' with {'path': 'assets/shop/css/style.css'} %}
+        <link rel="stylesheet" href="{{ asset('bundles/syliusshop/styles.css') }}">
 
         {{ sonata_block_render_event('sylius.shop.layout.stylesheets') }}
     {% endblock %}
