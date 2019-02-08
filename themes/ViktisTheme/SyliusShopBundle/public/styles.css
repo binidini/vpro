@@ -6,6 +6,18 @@
 }
 */
 
+
+/*
+
+body {
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+   font-size: 14px;
+   line-height: 1.4285em;
+   color: #236c79;
+   }
+
+*/
+
 .blurring.dimmable>.dimmer {
     background-color: rgba(66,105,140,.6);
 }
@@ -18,6 +30,8 @@
 }
 
 .ui.inverted.segment, .ui.primary.inverted.segment {
+    border: 0 solid transparent;
     background: #0f4c64;
-/*    color: rgba(255,255,255,.9); */
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
