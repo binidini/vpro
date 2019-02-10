@@ -1,0 +1,33 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+{% include '@SyliusShop/Product/Show/_breadcrumb.html.twig' %}
+<div class="ui hidden divider"></div>
+
+
+
+<div class="ui stackable grid">
+    <div class="four wide column">
+        {% include '@SyliusShop/Product/Index/_sidebar.html.twig' %}
+    </div>
+    <div class="twelve wide column">
+        <div class="ui one column stackable grid">
+            <div class="column">
+                {% include '@SyliusShop/Product/Show/_images.html.twig' %}
+            </div>
+            <div class="column">
+                {% include '@SyliusShop/Product/Show/_header.html.twig' %}
+
+                <div class="ui basic segment">
+                    <p>{{ product.shortDescription | raw }}</p>
+                </div>
+
+                <div class="ui hidden divider"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

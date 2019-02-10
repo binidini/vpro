@@ -1,0 +1,9 @@
+{# Product #}
+{% if resources.data|length > 0 %}
+    <div class="ui three cards" id="products" >
+        {% for product in resources.data %}
+            {% include '@SyliusShop/Product/_box.html.twig' %}
+        {% endfor %}
+    </div>
+    <div class="ui hidden divider"></div>
+{% endif %}

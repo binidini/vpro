@@ -4,3 +4,14 @@ bitbag_sylius_cms_plugin:
 bitbag_sylius_cms_plugin_shop:
     resource: "@BitBagSyliusCmsPlugin/Resources/config/routing/shop.yml"
     prefix: /
+
+viktis_shop_product_index:
+    path: /viktis/taxons/{slug}
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.product:indexAction
+        _sylius:
+            template: $template
+            grid: sylius_shop_product
+    requirements:
+        slug: .+

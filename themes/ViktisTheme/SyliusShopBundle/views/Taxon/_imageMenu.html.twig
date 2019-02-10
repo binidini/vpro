@@ -1,2 +1,10 @@
+{% if taxon.hasChildren() %}
+{% else %}
+    {{ render(url('viktis_shop_product_index', {
+        'slug': app.request.attributes.get('slug'),
+        'template': '@SyliusShop/Product/Index/_products.html.twig'
+    })) }}
+{% endif %}
+
 {{ render(url('sylius_shop_partial_taxon_index_by_code', {'code': taxon.code, 'template': '@SyliusShop/Taxon/_horizontalList.html.twig'})) }}
 
